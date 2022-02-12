@@ -10,8 +10,10 @@ export class StoreService {
   constructor(private store: Store<AppState>) {}
   addTODO(title: string) {
     const initalId = Math.random();
-    const mainId = Math.round(initalId);
-    const data: TODO = { title: title, id: mainId, isEdit: false };
+    const data: TODO = { title: title, id: initalId, isEdit: false };
     this.store.dispatch(new TODOActions.AddTodo(data));
+  }
+  deleteTodo(id: number) {
+    this.store.dispatch(new TODOActions.DeleteTodo(id));
   }
 }
