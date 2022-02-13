@@ -16,4 +16,7 @@ export class StoreService {
   deleteTodo(id: number) {
     this.store.dispatch(new TODOActions.DeleteTodo(id));
   }
+  startEdit(id: number) {
+    this.store.dispatch(new TODOActions.StartEditTodo(id));
+  }
 }
