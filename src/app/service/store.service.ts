@@ -19,4 +19,7 @@ export class StoreService {
   startEdit(id: number) {
     this.store.dispatch(new TODOActions.StartEditTodo(id));
   }
+  getAllTODO() {
+    return this.store.select('TODO');
+  }
 }

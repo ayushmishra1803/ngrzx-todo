@@ -12,4 +12,10 @@
       ></ngrx-button>
     </div>
   </div>
+  <!-- list div -->
+  <div>
+    <ngrx-list
+      [TODO]="(TODO$ | async).todo ? (TODO$ | async).todo : []"
+    ></ngrx-list>
+  </div>
 </div>

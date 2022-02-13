@@ -1,1 +1,6 @@
-<p>list works!</p>
+<ul>
+  <ngrx-list-item
+    *ngFor="let loopedtodo of TODO"
+    (todo)="(loopedtodo)"
+  ></ngrx-list-item>
+</ul>
