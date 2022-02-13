@@ -13,7 +13,6 @@ export class StoreService {
     const data: TODO = { title: title, id: initalId, isEdit: false };
     this.store.dispatch(new TODOActions.AddTodo(data));
   }
-  
   deleteTodo(id: number) {
     this.store.dispatch(new TODOActions.DeleteTodo(id));
   }
